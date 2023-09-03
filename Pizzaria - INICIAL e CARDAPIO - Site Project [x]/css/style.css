@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital@0;1&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+    font-family: Oswald;
+    src: url(../fonts/Oswald-Regular.ttf) format(truetype);
+    font-weight: 400;
+}
+@font-face {
+    font-family: Oswald;
+    src: url(../fonts/Oswald-Bold.ttf) format(truetype);
+    font-weight: 600;
+}
+@font-face {
+    font-family: Oswald;
+    src: url(../fonts/Oswald-ExtraLight.ttf) format(truetype);
+    font-weight: 100;
+}
+@font-face {
+    font-family: Oswald;
+    src: url(../fonts/Oswald-Light.ttf) format(truetype);
+    font-weight: 200;
+}
+@font-face {
+    font-family: Oswald;
+    src: url(../fonts/Oswald-Medium.ttf) format(truetype);
+    font-weight: 300;
+}
+@font-face {
+    font-family: Oswald;
+    src: url(../fonts/Oswald-SemiBold.ttf) format(truetype);
+    font-weight: 500;
+}
+
+body{
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    margin: auto;
+}
+
+#titulo{
+    font: 2.2em 'Crimson Text', serif;
+    color: white;
+    background-color: #8f2d06;
+    width: 276px;
+    text-align: center;
+    margin: auto;
+    margin-top: -8px;
+    border-radius: 5px;
+}
+
+.subtitulos{
+    padding: 15px 0;
+    letter-spacing: -1px;
+    font: 2em 400 Oswald;
+    color: #723e02;
+    text-align: center;
+}
+
+nav{
+    text-align: center;
+    margin: 20px 0;
+}
+
+.menu{
+    margin: 0 15px;
+    text-decoration: none;
+    color: #068F25;
+}
+
+.menu:link{
+    color: #f02805;
+    text-decoration: none;
+}
+
+.menu:hover, a:visited {
+    color: #941903;
+    text-decoration: underline;
+}

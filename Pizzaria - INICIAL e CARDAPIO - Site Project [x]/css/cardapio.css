@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+#desc{
+    text-align: center;
+}
+
+p{
+    padding-left: 20px;
+}
+
+.precos{
+    padding: 2px 20px;
+    color:rgba(44, 219, 59, 0.877);
+}
+
+div > button[type=submit]{
+    margin: -25px 10px;
+    margin-bottom: 5px;
+    font: 13 normal Arial, Helvetica, sans-serif;
+    width: 165px;
+    height: 35px;
+    background-color: #B04853;
+    padding: 2px 5px;
+    border: none;
+    color: white;
+}
+
+.desc{
+    display: block;
+    margin-bottom: 100%;
+}
+
+/*------------------GAMBIARRA---------------------*/
+#fora1 > button[type=submit],
+#fora2 > button[type=submit]{
+    margin: -45px 10px;
+}
+
+#fora1 > .precos,
+#fora2 > .precos{
+    padding: 0 20px;
+    margin-top: -13px;
+}
+
+#fora1 > p,
+#fora2 > p{
+    margin-top: -5px;
+}
+/*-------------------------------------------------*/
+
+.produtos{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-top: 25px;
+    width: 100%;
+    /*background-color: aliceblue;*/
+}
+
+.produto{
+    background-color: white;
+    border-radius: 15px;
+    width: 25em;
+    flex: 1 1 100%;
+    padding-right: 5px;
+    display: flex;
+    flex-direction: row;
+    height: 200px;
+    margin-top: 15px;
+    box-shadow: 0 0 5px #3d3d3d;
+    cursor: pointer;
+}
+
+li, ul{
+    margin: auto;
+    display: inline-block;
+}
+
+.pizzas{
+    border-radius: 15px;
+}

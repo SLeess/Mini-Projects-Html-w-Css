@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria Unimontes</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/cardapio.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+    <header class="head">
+        <h1 id="titulo">Pizzaria Unimontes</h1>
+        <!--<nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Páginas</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Início</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Cardápio</a>
+                  </li>
+                </ul>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Pizza Portuguesa" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Busca</button>
+                </form>
+              </div>
+            </div>
+          </nav>-->
+        <nav>
+            <a href="inicio.html" class="menu">INÍCIO</a>
+            <a href="#" class="menu">CARDÁPIO</a>
+        </nav>
+    </header>
+    <main>
+        <figure>
+          <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRdyw-ufjYn5Y4gxYjT2OpD83yrC-BtJy-zOiY_Lcqu1oU8swp0" style="width: 100%;" alt="Imagem de pizza">
+        </figure>
+
+        <h1 class="subtitulos">Cardápio</h1>
+        <p id="desc">Pizzas exclusivas no forno a lenha ou deixe-se tentar por nossas massas, antepasta, facaccias, salas e pratos <br>de Bruscheta. Relache no ambiente amigável enquanto aprecia os aromas dos fornos a lenha ou sente-se ao ar <br>livre a aproveite o sal de Mildura</p>
+
+        <section>
+            <li class="produtos">
+              <ul>
+                <div class="produto">
+                  <div>
+                    <img src="../imagens/pizza1.jpg" class="pizzas" alt="">
+                  </div>
+                  <div class="desc">
+                    <h1 style="padding: 0 20px;">Original</h1>
+                    <p>Molho de tomate, mussarela e orégano</p>
+                    <h3 class="precos">$18.00</h3>
+                    <button type="submit" onclick="cardapio.html">Adicionar ao Carrinho</button>
+                  </div>
+                </div>
+              </ul>
+              <ul>
+                <div class="produto">
+                  <div>
+                    <img src="../imagens/pizza2.jpg" class="pizzas" alt="">
+                  </div>
+                  <div class="desc">
+                    <h1 style="padding: 0 20px;">Salame</h1>
+                    <p>Molho de tomate, mussarela e salame</p>
+                    <h3 class="precos">$15.00</h3>
+                    <button type="submit" onclick="cardapio.html">Adicionar ao Carrinho</button>
+                  </div>
+                </div>
+              </ul>
+              <ul>
+                <div class="produto">
+                  <div>
+                    <img src="../imagens/pizza3.jpg" class="pizzas" alt="">
+                  </div>
+                  <div class="desc" id="fora1">
+                    <h1 style="padding: 0 20px;">Frango</h1>
+                    <p>Molho de tomate, abacaxi, mussarela, frango e molho</p>
+                    <h3 class="precos">$25.00</h3>
+                    <button type="submit" onclick="cardapio.html">Adicionar ao Carrinho</button>
+                  </div>
+                </div>
+              </ul>
+              <ul>
+                <div class="produto">
+                  <div>
+                    <img src="../imagens/pizza4.jpg" class="pizzas" alt="">
+                  </div>
+                  <div class="desc" id="fora2">
+                    <h1 style="padding: 0 20px;">Havaiano</h1>
+                    <p>Molho de tomate, mussarela, presunto e abacaxi</p>
+                    <h3 class="precos">$16.00</h3>
+                    <button type="submit" onclick="cardapio.html">Adicionar ao Carrinho</button>
+                  </div>
+                </div>
+              </ul>
+            </li>
+        </section>
+    </main>
+    <footer>
+      <p style="text-align: center; display: block; padding-top: 50px; color: #024959;">&copy; Leandro Durães Freitas</p>
+    </footer>
+</body>
+</html>
