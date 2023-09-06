@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+        @charset 'UTF-8';
+        *{
+            font: normal 1.1em Arial, Verdana, serif;
+        }
+
+        body{
+            background-image: linear-gradient(45deg, #239CE8, #239CE8, #239CE8, #239CE8, #239CE8);
+        }
+
+       h1{
+        font: normal 1.7em 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        border: 2px;
+        outline: 3px;
+        padding: 5px;
+        border-radius: 10px;
+        text-align: center;
+        margin: auto;
+       } 
+
+       .fundoazul{
+        color: rgb(238, 232, 222);
+        background-image: linear-gradient(45deg, #57577a, #1e202e, #223f75);
+        border-radius: 5px;
+       }
+
+       div{
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.644);
+        background-color: white;
+       }
+
+       section{
+        border-radius: 10px;
+        padding: 5px;
+        width: 900px;
+        margin: auto;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.644);
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: white;
+       }
+
+       button[type=submit]{
+        background-color: #04AA6D;
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+        display: block; 
+        margin-top: 10px;
+       }
+
+       textarea:focus, input:focus {
+         box-shadow: 0 0 0 0;
+         outline: 0;
+        }
+
+       .inputtext{
+        /*width: 100%;*/
+        border: none;
+        border-bottom: 2px solid red;
+        font-size:20px;
+        color:black;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+       }
+
+       #form{
+        background-image: linear-gradient(45deg, #E89623, #ECB66A, #E89623);
+       }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="padding: 15px;">
+            <h1 lang="pt-br">Usando CSS</h1>
+            <h1 lang="en">Using Css</h1>
+                <div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt culpa tempora laudantium aperiam, perspiciatis veniam aspernatur ab eveniet vero inventore? Ab ipsa voluptatibus provident quasi explicabo eveniet commodi ipsam quidem.
+                    </p>
+                    <p class="fundoazul">
+                        Bom dia.
+                    </p>
+                    <p>
+                        Boa tarde.
+                    </p>
+                    <p class="fundoazul">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit corporis laudantium veritatis voluptatibus. Omnis, qui placeat itaque excepturi optio commodi vero maxime, ullam atque adipisci eum eos consectetur, perferendis doloribus.
+                    </p>
+                </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="padding: 15px;">
+            <figure>
+                <img style="margin: auto; width: 100%;" src="https://i0.wp.com/hitsite.com.br/wp-content/uploads/2023/04/Thais-Carla.jpg?fit=1200%2C675&ssl=1" alt="Imagem-Grande">
+                <figcaption>Imagem da Thais Carla</figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <br>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <form action="" style="display: grid; padding: 15px 25px;">
+                        <h1>Formulário - Roubo de Dados</h1>
+                        <p>Nome Completo</p>
+                        <input type="text" name="nomecompleto" id="nomecompleto" class="inputtext">
+                        <p>Telefone</p>
+                        <input type="number" name="telefone" id="telefone" class="inputtext">
+                        <p>E-mail</p>
+                        <input type="email" name="email" id="email" class="inputtext">
+                        <button type="submit">Salvar</button>
+                </form>
+            </div>
+        </div>
+
+    <hr>
+    <section>
+        <p class="d-inline-flex gap-1">
+            <button type="button" class="btn" data-bs-toggle="button">Toggle button</button>
+            <button type="button" class="btn active" data-bs-toggle="button" aria-pressed="true">Active toggle button</button>
+            <button type="button" class="btn" disabled data-bs-toggle="button">Disabled toggle button</button>
+          </p>
+          <p class="d-inline-flex gap-1">
+            <button type="button" class="btn btn-primary" data-bs-toggle="button">Toggle button</button>
+            <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Active toggle button</button>
+            <button type="button" class="btn btn-primary" disabled data-bs-toggle="button">Disabled toggle button</button>
+          </p>
+    </section>
+
+    <br><br><br><br>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
