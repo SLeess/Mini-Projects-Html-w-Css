@@ -74,6 +74,12 @@ div > button[type=submit]{
 li, ul{
     margin: auto;
     display: inline-block;
+    transition: all 0.3s;
+}
+
+ul:hover{
+    transform: scale(1.05);
+    transition: all 0.3s;
 }
 
 .pizzas{
