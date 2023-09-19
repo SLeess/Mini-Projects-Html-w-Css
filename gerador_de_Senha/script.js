@@ -6,10 +6,8 @@ let password = document.querySelector("#password");
 
 let containerPassword = document.querySelector("#container-password");
 
-let charset = "";
+let charset;
 let novaSenha = "";
-
-//let charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@_";
 
 sizePassword.innerHTML = sliderElement.value;
 
@@ -18,6 +16,8 @@ slider.oninput = function(){
 }
 
 function generatePassword(){
+    charset = "";
+
     var checkboxUm = document.querySelector("#cbnum");
     var checkboxDois = document.querySelector("#cbletr");
     var checkboxTres = document.querySelector("#cbspec");
