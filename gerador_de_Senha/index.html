@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Gerador de senhas, password generator">
+    <title>Gerador de Senha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="">Home</a>
+            </li>
+            <li class="dropdown">
+                <a href="">Sobre</a>
+
+                <div class="dropdown-menu">
+                    <a href="">Quem somos</a>
+                    <a href="">Descrições</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="">Serviços</a>
+
+                <div class="dropdown-menu">
+                    <a href="">Gerador de Email</a>
+                    <a href="">Gerador de lorem ipsum</a>
+                    <a href="">Gerador de Users</a>
+                    <a href="">Gerador de CPF</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="">Contatos</a>
+
+                <div class="dropdown-menu">
+                    <a href="">Instagram</a>
+                    <a href="">Email</a>
+                    <a href="">Facebook</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    
+    <section>
+        
+        <img class="logo" src="https://i.ibb.co/m8YvYBr/logo.png" alt="Logo"/>
+        <main class="container-input">
+            <span>Tamanho <span id="valor"></span> caracteres</span>
+            <input type="range" name="" id="slider" class="slider" min="5" max="25" value="15"/>
+
+            <div class="filtros">
+                <input type="checkbox" name="cbnum" id="cbnum">
+                <label for="num">Contém números</label> <br>
+                
+                <input type="checkbox" name="cbletr" id="cbletr"> 
+                <label for="letras">Contém letras</label> <br>
+                
+                <input type="checkbox" name="cbspec" id="cbspec"> 
+                <label for="specials">Contém caracteres especiais</label> <br>
+            </div>
+
+            <button id="button" class="button-cta" onclick="generatePassword()">Gerar senha <i class="fa-solid fa-play"></i></button>
+        </main>
+        <div id="container-password" onclick="copyPassword()" class="container-password hide">
+            <span class="title"><i class="fa-solid fa-shield-halved"></i> Sua senha gerada foi:</span>
+            <span id="password" class="password">123123213123131</span>
+            <span class="tooltip">Clique na senha para copiar &uArr;</span>
+        </div>
+    </section>
+    
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/fc3a25c4c4.js" crossorigin="anonymous"></script>
+</body>
+</html>
