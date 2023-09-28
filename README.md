@@ -7,6 +7,10 @@ Some projects I did at different times.
 - Site [Cordel Moderno](https://sleess.github.io/Colection_Projects-HTML-CSS/cordel-moderno/html/index.html)
 - Site [Gerador de Senhas](https://sleess.github.io/Colection_Projects-HTML-CSS/gerador_de_Senha/index.html)
 
+### Novas Atividades
+
+- Site [Atividade de Integração: HTML e PHP](https://sleess.github.io/Colection_Projects-HTML-CSS/integracao-html-php/index.html)
+
   
 ## My [Profile Account](https://github.com/SLeess)
 ![Avatar](https://avatars.githubusercontent.com/u/105681930?v=4)

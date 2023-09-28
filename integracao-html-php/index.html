@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários PHP</title>
+    <script type="text/javascript" src="_scripts/apiCep.js"></script>
+    <script type="text/javascript" src="_scripts/principal.js"></script>
+    <link rel="stylesheet" href="_styles/style.css">
+</head>
+<body>
+    <main>
+        <h1>Bolsa auxílio-tecnologia</h1>
+        <h2>Formulário</h2>
+        <form action="_php/arquivo.php" method="POST" name="form1">
+            <div class="padrao">
+                <label for="cpf">CPF</label>
+                <input type="text" name="ao_cpf" id="ao_cpf" maxlength="14" placeholder="Digite seu CPF" oninput="formatarCPF(this)" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="000.000.000-00"/>
+
+                <label for="nome">Nome Completo</label>
+                <input type="text" name="ao_nome" id="ao_nome" placeholder="Nome" required pattern="[A-Za-z ]+" title="Nome vazio inválido">
+
+                <label for="ano">Ano de Nascimento</label>
+                <input type="text" name="ao_ano_nascimento" id="ao_ano_nascimento" placeholder="xxxx" maxlength="4" required pattern="\d{4}" title="1999" oninput="apenasNum(this, 4)">
+            </div>
+            <br>
+
+            <h2 id="enderecolbl " style="font-weight: normal;margin-top: 15px;">Endereço</h2>
+            
+            <div class="padrao" id="endereco">
+                <label for="logradouro">Logradouro</label>
+                <input type="text" name="ao_logradouro" id="ao_logradouro" placeholder="Logradouro" require pattern="[A-Za-z ]+" title="Rua de Teste">
+                <label for="numero">Número</label>
+                <input type="text" name="ao_numero" id="ao_numero" placeholder="Número" required pattern="\d{1}" title="333">
+                
+                <label for="bairro">Bairro</label>
+                <input type="text" name="ao_bairro" id="ao_bairro" placeholder="Bairro" require pattern="[A-Za-z ]+" title="Bairrolândia">
+                
+                <label for="Cidade">Cidade</label>
+                <input type="text" name="ao_cidade" id="ao_cidade" placeholder="Cidade" require pattern="[A-Za-z ]+" title="Cidade de Estado">
+                
+                <label for="estado">Estado</label>
+                <input type="text" name="ao_estado" id="ao_estado" placeholder="Estado" require pattern="[A-Za-z ]+" title="Estado do país">
+            </div>
+
+            <!--<label for="erro" id="erro" class="hide">Erro</label>-->
+            <p id="erro" class="hide">Erro</p>
+
+            
+            <div id="formCep">
+                <label for="cep">CEP</label>
+                <input type="text" name="Cep" id="Cep" placeholder="Cep" style="margin-bottom: 5px;" required pattern="\d{7}" title="xxxxxxxx">
+                <!--type="submit"-->
+                <button type="button" id="btbusca" value="busca" name="busca" onclick="consultaCep()">Buscar Endereço</button>
+            </div>
+            
+            <div class="padrao">
+                <label for="telefone">Telefone</label>
+                <input type="text" name="telefone" id="telefone" placeholder="(+55) 99 99999-9999" required pattern="\d{3}" title="(+55) 00 99999-9999">
+
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="youremail@email.com" required pattern=".*@.*\.com.*" title="yoremail@gmail.com">
+
+                <label for="salario">Salário ou Renda Total</label>
+                <input type="text" name="salario" id="salario" placeholder="R$ 0000,00" oninput="this.value = this.value.replace(/[^0-9.,]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/(\,,*?)\,,*/g, '$1');" required pattern="\d{1}" title="1000.00">
+            </div>
+
+            <div class="padrao" style="border: none; padding: 1px; margin-top: 15px">
+                <label for="computador">Possui Computador?</label>
+                <input type="checkbox" name="computador" id="computador">
+                <label for="telefone">Possui Telefone?</label>
+                <input type="checkbox" name="cbtelefone" id="cbtelefone">
+            </div>               
+            <input type="submit" value="Enviar Dados" style="width: 45vw; margin-top: 45px;">
+        </form>
+    </main>
+    <script></script>
+</body>
+</html>

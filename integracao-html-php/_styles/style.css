@@ -1,0 +1,195 @@
+@charset "UTF-8";
+
+:root{
+    --background-cor: #bdc9d7;
+    --primary-cor: white;
+    --secundary-cor: black;
+    --fontes-padrao: black;
+    /*--fontes-padrao: #f8f8ec;*/
+
+    /*--primary-cor: green;
+    --secundary-cor: white;*/
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    color: var(--fontes-padrao);
+}
+
+body{
+    height: 98vh;
+    background-color: #bdc9d7;
+    /*display: flex;
+    justify-content: center;
+    align-items: center;*/
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    text-align: center;
+    font-size: 2em;
+}
+
+h2{
+    text-align: start;
+}
+
+main{
+    padding: 25px;
+    max-width: 750px;
+    min-width: 380px;
+    margin-top: 45px;
+    width: 60%;
+    text-align: center;
+    background-color: white;
+    /*background-image: linear-gradient(45deg, #02416d, #066699, #0a5483);*/
+    margin: auto;
+    border-radius: 20px;
+}
+
+label{
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+br{
+    margin-bottom: 150px;
+}
+
+.padrao{
+    display: flexbox;
+    max-width: 95%;
+    columns: 3;
+    flex-wrap: nowrap;
+    /*border: 2px solid #aedd2b;*/
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.521);
+    padding: 12px 15px;
+    border-radius: 16px;
+    margin-top: 8px;
+}
+
+/* Estilos para telas menores (por exemplo, quando a largura da tela for menor que 768px) */
+@media (max-width: 980px) {
+    #Cep{
+        max-width: 95px;
+    }
+    .padrao {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        width: 65vw;
+        padding-bottom: 25px;
+        margin-bottom: 15px;
+    }
+
+    label{
+        display: inline-block;
+        text-align: center;
+    }
+
+    h2{
+        margin-left: 23vw;
+    }
+
+    input{
+        display: inline-block;
+        width: 45vw;
+    }
+
+    input[type=checkbox]{
+        position: relative;
+        left: 35%;
+        top: -215%;
+    }
+}
+
+.padrao > label{
+    padding: 12px;
+    margin: 0;
+    text-align: start;
+}
+
+#enderecolbl{
+    margin-top: 15px;
+    text-align: start;
+    font-size: 1.4em;
+}
+
+button{
+    display: block;
+    width: 174px;
+    position: relative;
+    left: 35%;
+}
+
+.hide{
+    display: none;
+}
+
+.certo{
+    color: green;
+    width: 25%;
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 25%;
+}
+
+.certo::after{
+    content: "✓";
+    padding-left: 10px;
+}
+
+input{
+    padding: 5px;
+    color: black;
+}
+
+#Cep{
+    padding: 2px;
+}
+
+#erro{
+    color: red;
+    font-style: bolder;
+    background-color: white;
+    width: 45%;
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 27%;
+}
+
+#btbusca, input[type=submit]{
+    border: 0;
+    padding: 5px;
+    width: 200px;
+    height: 35px;
+    display: block;
+    margin: 5px;
+    margin: auto;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    align-items: center;
+    align-content: center;
+    position: static;
+    color: #000;
+    background-color: #79bfeb;
+    transition: all 0.35s ease-in-out;
+    /*left: 29.5vw;*/
+}
+
+#btbusca:hover, input[type=submit]:hover{
+    background-color: #0a5483;
+    color: white;
+}
