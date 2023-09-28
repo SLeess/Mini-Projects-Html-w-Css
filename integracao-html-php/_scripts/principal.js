@@ -26,3 +26,8 @@ function apenasNum(input, tamanho){
         input.value = input.value.substring(0, tamanho);
     }
 }
+
+window.addEventListener('beforeunload',  e => {
+    e.preventDefault();
+    e.returnValue = '';
+});
