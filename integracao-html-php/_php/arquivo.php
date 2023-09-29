@@ -70,8 +70,9 @@
                 $email = $_POST['email'];
                 $salario = $_POST['salario'];
                 $computador = isset($_POST['computador'])? true : false;
-                $cbtelefone = isset($_POST['cbtelefone'])? true : false;
-                $cbnotebook = isset($_POST['notebook'])? true : false;
+                $cbtelefone = isset($_POST['cbtelefone'])?true : false;
+                $cbnotebook = isset($_POST['notebook'])?
+                true : false;
 
                 $idade = date('Y') - $_POST['ao_ano_nascimento'];
 
