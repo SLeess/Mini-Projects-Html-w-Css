@@ -209,7 +209,8 @@
 </head>
 <body>
     <main>
-        <h1>SBAT - SISTEMA DE SOLICITAÇÃO DE BOLSA AUXÍLIO-TECNOLOGIA</h1>
+        <h1 onclick="preencherAuto()" style="cursor: pointer">SBAT - SISTEMA DE SOLICITAÇÃO DE BOLSA AUXÍLIO-TECNOLOGIA</h1>
+        <p style="color: rgba(90, 90, 90, 0.548); margin-bottom: 10px;">&rarr; Clique no título acima para preencher com um template de dados (ilustrativos)&larr;</p>
         <h2>Formulário</h2>
         <form action="_php/arquivo.php" method="POST" name="form1">
             <div class="padrao">
@@ -275,7 +276,7 @@
 
             <input type="text" name="ao_hora" id="ao_hora" class="invisible">
 
-            <input type="submit" value="Enviar Dados" style="width: 45vw; margin-top: 45px;" onclick="marcarDataHora()">
+            <input type="submit" value="Enviar Dados" style="max-width: 600px; width: 45vw; margin-top: 45px;" onclick="marcarDataHora()">
         </form>
     </main>
     <script>
