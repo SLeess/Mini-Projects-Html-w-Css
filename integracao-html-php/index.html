@@ -4,212 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulários PHP</title>
-    <!--<script type="text/javascript" src="_scripts/apiCep.js"></script>
-    <script type="text/javascript" src="_scripts/principal.js"></script>-->
-    <style>
-        @charset "UTF-8";
-
-        :root{
-            --background-cor: #bdc9d7;
-            --primary-cor: white;
-            --secundary-cor: black;
-            --fontes-padrao: black;
-            /*--fontes-padrao: #f8f8ec;*/
-
-            /*--primary-cor: green;
-            --secundary-cor: white;*/
-        }
-
-        *{
-            padding: 0;
-            margin: 0;
-            color: var(--fontes-padrao);
-        }
-
-        body{
-            height: 98vh;
-            background-color: #bdc9d7;
-            /*display: flex;
-            justify-content: center;
-            align-items: center;*/
-        }
-
-        h1{
-            text-align: center;
-            margin-bottom: 15px;
-            margin-top: 15px;
-            text-align: center;
-            font-size: 2em;
-        }
-
-        h2{
-            text-align: start;
-        }
-
-        main{
-            padding: 25px;
-            max-width: 750px;
-            min-width: 380px;
-            margin-top: 45px;
-            width: 60%;
-            text-align: center;
-            background-color: white;
-            /*background-image: linear-gradient(45deg, #02416d, #066699, #0a5483);*/
-            margin: auto;
-            border-radius: 20px;
-        }
-
-        br{
-            margin-bottom: 150px;
-        }
-
-        .padrao{
-            display: flexbox;
-            max-width: 95%;
-            columns: 3;
-            flex-wrap: nowrap;
-            /*border: 2px solid #aedd2b;*/
-            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.521);
-            padding: 12px 15px;
-            border-radius: 16px;
-            margin-top: 8px;
-        }
-
-        /* Estilos para telas menores (por exemplo, quando a largura da tela for menor que 768px) */
-        @media (max-width: 980px) {
-            #Cep{
-                max-width: 95px;
-            }
-            .padrao {
-                display: grid;
-                align-items: center;
-                justify-content: center;
-                margin: auto;
-                width: 65vw;
-                padding-bottom: 25px;
-                margin-bottom: 15px;
-            }
-
-            label{
-                display: inline-block;
-                text-align: center;
-            }
-
-            h2{
-                margin-left: 23vw;
-            }
-
-            input{
-                display: inline-block;
-                width: 45vw;
-            }
-
-            input[type=checkbox]{
-                position: relative;
-                left: 35%;
-                top: -215%;
-            }
-        }
-
-        .invisible{
-            display: none;
-        }
-
-        .padrao > label, .padrao > span{
-            padding: 12px;
-            margin: 0;
-            text-align: start;
-        }
-
-        label, span{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 5px;
-        }
-
-        #enderecolbl{
-            margin-top: 15px;
-            text-align: start;
-            font-size: 1.4em;
-        }
-
-        button{
-            display: block;
-            width: 174px;
-            position: relative;
-            left: 35%;
-        }
-
-        .hide{
-            display: none;
-        }
-
-        .certo{
-            color: green;
-            width: 25%;
-            border-radius: 15px;
-            text-align: center;
-            margin-top: 5px;
-            margin-bottom: 5px;
-            margin-left: 25%;
-        }
-
-        .certo::after{
-            content: "✓";
-            padding-left: 10px;
-        }
-
-        input{
-            padding: 5px;
-            color: black;
-        }
-
-        #Cep{
-            padding: 2px;
-        }
-
-        #erro{
-            color: red;
-            font-style: bolder;
-            background-color: white;
-            width: 45%;
-            border-radius: 15px;
-            text-align: center;
-            margin-top: 5px;
-            margin-bottom: 5px;
-            margin-left: 27%;
-        }
-
-        #btbusca, input[type=submit]{
-            border: 0;
-            padding: 5px;
-            width: 200px;
-            height: 35px;
-            display: block;
-            margin: 5px;
-            margin: auto;
-            margin-bottom: 10px;
-            cursor: pointer;
-            border-radius: 4px;
-            align-items: center;
-            align-content: center;
-            position: static;
-            color: #000;
-            background-color: #79bfeb;
-            transition: all 0.35s ease-in-out;
-            /*left: 29.5vw;*/
-        }
-
-        #btbusca:hover, input[type=submit]:hover{
-            background-color: #0a5483;
-            color: white;
-        }
-    </style>
+    <script type="text/javascript" src="_scripts/apiCep.js"></script>
+    <script type="text/javascript" src="_scripts/principal.js"></script>
+    <link rel="stylesheet" href="_styles/style.css">
 </head>
 <body>
     <main>
-        <h1>SBAT - SISTEMA DE SOLICITAÇÃO DE BOLSA AUXÍLIO-TECNOLOGIA</h1>
+        <h1 onclick="preencherAuto()" style="cursor: pointer">SBAT - SISTEMA DE SOLICITAÇÃO DE BOLSA AUXÍLIO-TECNOLOGIA</h1>
+        <p style="color: rgba(90, 90, 90, 0.548); margin-bottom: 10px;">&rarr; Clique no título acima para preencher com um template de dados (ilustrativos)&larr;</p>
         <h2>Formulário</h2>
         <form action="_php/arquivo.php" method="POST" name="form1">
             <div class="padrao">
@@ -275,103 +77,42 @@
 
             <input type="text" name="ao_hora" id="ao_hora" class="invisible">
 
-            <input type="submit" value="Enviar Dados" style="width: 45vw; margin-top: 45px;" onclick="marcarDataHora()">
+            <input type="submit" value="Enviar Dados" style="max-width: 600px; width: 45vw; margin-top: 45px;" onclick="marcarDataHora()">
         </form>
     </main>
     <script>
-        function consultaCep() {
-            var cep = document.getElementById("Cep").value.replace(/\D/g, '');
-            var url = 'https://viacep.com.br/ws/' + cep + '/json/';
+        function preencherAuto(){
+            // SCRIPT PARA FACILITAR MANUTENÇÃO, FAVOR DESCONSIDERAR
+            const campoCPF = document.getElementById('ao_cpf');
+            const campoNome = document.getElementById('ao_nome');
+            const campoAnoNascimento = document.getElementById('ao_ano_nascimento');
+            const campoLogradouro = document.getElementById('ao_logradouro');
+            const campoNumero = document.getElementById('ao_numero');
+            const campoBairro = document.getElementById('ao_bairro');
+            const campoCidade = document.getElementById('ao_cidade');
+            const campoEstado = document.getElementById('ao_estado');
+            const campoCEP = document.getElementById('Cep');
+            const campoTelefone = document.getElementById('telefone');
+            const campoEmail = document.getElementById('email');
+            const campoSalario = document.getElementById('salario');
+            const campoComputador = document.getElementById('computador');
+            const campoCBTelefone = document.getElementById('cbtelefone');
 
-            var request = new XMLHttpRequest();
-            request.open('GET', url);
-
-            request.onerror = function (e) {
-                document.getElementById('erro').classList.remove("hide");
-                document.getElementById('erro').innerHTML = 'API OFFLINE OU CEP INVÁLIDO';
-            }
-
-            request.onload = function () {
-                if (request.status === 200) {
-                    var response = JSON.parse(request.responseText);
-
-                    if (response.erro === true) {
-                        document.getElementById('erro').innerHTML = 'CEP NÃO ENCONTRADO';
-                        document.getElementById('erro').classList.remove("hide");
-                    } else {
-                        var logradouro = document.querySelector('input[name=ao_logradouro]');
-                        var bairro = document.querySelector('input[name=ao_bairro]');
-                        var cidade = document.querySelector('input[name=ao_cidade]');
-                        var estado = document.querySelector('input[name=ao_estado]');
-
-                        cep.value = response.cep;
-                        logradouro.value = response.logradouro;
-                        bairro.value = response.bairro;  
-                        cidade.value = response.localidade;
-                        estado.value = response.uf;
-                        document.getElementById('erro').classList.remove("hide");
-                        document.getElementById('erro').classList.add("certo");
-                        document.getElementById('erro').innerHTML = 'CEP ENCONTRADO';
-                    }
-
-                } else {
-                    document.getElementById('erro').innerHTML = 'Erro na requisição.';
-                    document.getElementById('erro').classList.remove("hide");
-                }
-            }
-
-            request.send();
-        }
-
-        function formatarCPF(input) {
-            // Remove tudo que não é número
-            var cpf = input.value.replace(/\D/g, "");
-
-            // Limita o CPF a 11 dígitos
-            if (cpf.length > 11) {
-                cpf = cpf.slice(0, 11);
-            }
-
-            // Formata o CPF (XXX.XXX.XXX-XX)
-            if (cpf.length <= 11) {
-                cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2");
-                cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2");
-                cpf = cpf.replace(/(\d{3})(\d{2})$/, "$1-$2");
-            }
-
-            // Define o valor formatado de volta no campo
-            input.value = cpf;
-        }
-
-        function apenasNum(input, tamanho){
-            input.value = input.value.replace(/\D/g, "");
-
-            // Limita o valor a 4 dígitos
-            if (input.value.length > tamanho) {
-                input.value = input.value.substring(0, tamanho);
-            }
-        }
-
-        window.addEventListener('beforeunload',  e => {
-            e.preventDefault();
-            e.returnValue = '';
-        });
-
-        function marcarDataHora(){
-            var data = document.getElementById('ao_data_reg');
-            var hora = document.getElementById('ao_hora');
-
-            var dataAtual = new Date();
-
-            // Formata a data no formato "YYYY-MM-DD" para o input do tipo 'date'
-            var dataFormatada = dataAtual.toISOString().split('T')[0];
-
-            // Formata a hora no formato "HH:mm" para o input de texto
-            var horaFormatada = dataAtual.toLocaleTimeString('en-US', { hour12: false });
-
-            // Define os valores nos inputs
-            data.value = dataFormatada;
-            hora.value = horaFormatada;
+            // Preencha os campos com valores de exemplo
+            campoCPF.value = '100.333.111-22';
+            campoNome.value = 'Leandro Durães Freitas';
+            campoAnoNascimento.value = '2004';
+            //campoLogradouro.value = 'Rua de Exemplo';
+            campoNumero.value = '333';
+            /*campoBairro.value = 'Bairro da Amostra';
+            campoCidade.value = 'Cidade Demonstração';
+            campoEstado.value = 'Estado de Teste';*/
+            campoCEP.value = '39400011';
+            campoTelefone.value = '(55) 99 99999-9999';
+            campoEmail.value = 'exemplo@email.com';
+            campoSalario.value = '1000.00';
+            campoComputador.checked = true;
+            campoCBTelefone.checked = true;
         }
     </script>
 </body>
