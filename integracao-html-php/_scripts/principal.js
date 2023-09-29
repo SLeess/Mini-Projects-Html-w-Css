@@ -31,3 +31,26 @@ window.addEventListener('beforeunload',  e => {
     e.preventDefault();
     e.returnValue = '';
 });
+
+function marcarDataHora(){
+    var data = document.getElementById('ao_data_reg');
+    var hora = document.getElementById('ao_hora');
+
+    var dataAtual = new Date();
+
+    // Formata a data no formato "YYYY-MM-DD" para o input do tipo 'date'
+    var dataFormatada = dataAtual.toISOString().split('T')[0];
+
+    // Formata a hora no formato "HH:mm" para o input de texto
+    var horaFormatada = dataAtual.toLocaleTimeString('en-US', { hour12: false });
+
+    // Define os valores nos inputs
+    data.value = dataFormatada;
+    hora.value = horaFormatada;
+}
+
+
+
+
+
+

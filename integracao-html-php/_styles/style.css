@@ -50,14 +50,6 @@ main{
     border-radius: 20px;
 }
 
-label{
-    display: block;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 5px;
-}
-
 br{
     margin-bottom: 150px;
 }
@@ -110,10 +102,21 @@ br{
     }
 }
 
-.padrao > label{
+.invisible{
+    display: none;
+}
+
+.padrao > label, .padrao > span{
     padding: 12px;
     margin: 0;
     text-align: start;
+}
+
+label, span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
 }
 
 #enderecolbl{

@@ -10,7 +10,8 @@
 </head>
 <body>
     <main>
-        <h1>Bolsa auxílio-tecnologia</h1>
+        <h1 onclick="preencherAuto()" style="cursor: pointer">SBAT - SISTEMA DE SOLICITAÇÃO DE BOLSA AUXÍLIO-TECNOLOGIA</h1>
+        <p style="color: rgba(90, 90, 90, 0.548); margin-bottom: 10px;">&rarr; Clique no título acima para preencher com um template de dados (ilustrativos)&larr;</p>
         <h2>Formulário</h2>
         <form action="_php/arquivo.php" method="POST" name="form1">
             <div class="padrao">
@@ -69,9 +70,50 @@
                 <input type="checkbox" name="computador" id="computador">
                 <label for="telefone">Possui Telefone?</label>
                 <input type="checkbox" name="cbtelefone" id="cbtelefone">
-            </div>               
-            <input type="submit" value="Enviar Dados" style="width: 45vw; margin-top: 45px;">
+                <label for="notebook">Possui Notebook?</label>
+                <input type="checkbox" name="notebook" id="notebook">
+            </div>
+            <input type="text" name="ao_data_reg" id="ao_data_reg" class="invisible">
+
+            <input type="text" name="ao_hora" id="ao_hora" class="invisible">
+
+            <input type="submit" value="Enviar Dados" style="width: 45vw; margin-top: 45px;" onclick="marcarDataHora()">
         </form>
     </main>
+    <script>
+        function preencherAuto(){
+            // SCRIPT PARA FACILITAR MANUTENÇÃO, FAVOR DESCONSIDERAR
+            const campoCPF = document.getElementById('ao_cpf');
+            const campoNome = document.getElementById('ao_nome');
+            const campoAnoNascimento = document.getElementById('ao_ano_nascimento');
+            const campoLogradouro = document.getElementById('ao_logradouro');
+            const campoNumero = document.getElementById('ao_numero');
+            const campoBairro = document.getElementById('ao_bairro');
+            const campoCidade = document.getElementById('ao_cidade');
+            const campoEstado = document.getElementById('ao_estado');
+            const campoCEP = document.getElementById('Cep');
+            const campoTelefone = document.getElementById('telefone');
+            const campoEmail = document.getElementById('email');
+            const campoSalario = document.getElementById('salario');
+            const campoComputador = document.getElementById('computador');
+            const campoCBTelefone = document.getElementById('cbtelefone');
+
+            // Preencha os campos com valores de exemplo
+            campoCPF.value = '100.333.111-22';
+            campoNome.value = 'Leandro Durães Freitas';
+            campoAnoNascimento.value = '2004';
+            //campoLogradouro.value = 'Rua de Exemplo';
+            campoNumero.value = '333';
+            /*campoBairro.value = 'Bairro da Amostra';
+            campoCidade.value = 'Cidade Demonstração';
+            campoEstado.value = 'Estado de Teste';*/
+            campoCEP.value = '39400011';
+            campoTelefone.value = '(55) 99 99999-9999';
+            campoEmail.value = 'exemplo@email.com';
+            campoSalario.value = '1000.00';
+            campoComputador.checked = true;
+            campoCBTelefone.checked = true;
+        }
+    </script>
 </body>
 </html>
